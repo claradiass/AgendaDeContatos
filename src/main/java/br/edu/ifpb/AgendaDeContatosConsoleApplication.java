@@ -2,55 +2,42 @@ package agendadecontatos;
 
 import java.util.*;
 
+import main.java.br.edu.ifpb.commands.AdicionarContatoCommand;
+import main.java.br.edu.ifpb.commands.BuscarContatoCommand;
+import main.java.br.edu.ifpb.commands.CommandExecutor;
+
+
+import br.edu.ifpb.commands.*;
+import main.java.br.edu.ifpb.repository.ContatoRepository;
+import main.java.br.edu.ifpb.repository.FileDataService;
+
 public class AgendaDeContatosConsoleApplication {
 
         public static void main(String[] args) {
-            Scanner leitor = new Scanner(System.in);
-    
-            System.out.print("1- Iniciar o app Agenda de Contatos \n2- Não iniciar o app Agenda de Contatos \nDigite a opção escolhida: ");
-            int opcao = leitor.nextInt();
-    
-            if (opcao == 1) {
-                // Agenda agenda = new Agenda();
-                // MenuAdicionar menu = new MenuAdicionar(agenda);
-    
-                while (true) {
-                    
-                    System.out.println(
-                        "\n*** Menu ***\n" +
-                        "1 - Adicionar contato\n" +
-                        "2 - Remover contato\n" +
-                        "3 - Buscar contato\n" +
-                        "4 - Listar contatos\n" +
-                        "5 - Editar contatos\n" +
-                        "6 - Exportar para um arquivo em CSV\n" +
-                        "0 - Sair"
-                    );
-    
-                    opcao = leitor.nextInt(); 
-    
-                    if (opcao < -1 || opcao > 6){
-                        System.out.println("Opção inválida, digite um número entre 0 e 6 (inclusive).");
-                        opcao = leitor.nextInt();
-                    }
-    
-                    // if (opcao == 0){
-                    //     break;
-                    // } else if (opcao == 1){
-                    //     menu.menuAdicionar(opcao);
-                    // } else if (opcao == 2){
-                    //     agenda.excluir(); 
-                    // } else if (opcao == 3){
-                    //     agenda.filtrar();
-                    // } else if (opcao == 4){
-                    //     agenda.listarContatos();
-                    // } else if (opcao == 5){
-                    //     agenda.editar();
-                    // } else if(opcao == 6){
-                    //     agenda.exportarContatosParaCSV("contatos.csv");
-                    // }
-                }
+        ContatoRepository dataService = ContatoRepository.getInstance();
+        dataService.setRepository(new FileDataService());
+        CommandExecutor executor = new CommandExecutor();
+
+        Scanner sc = new Scanner(System.in);
+        int opcao = -1;
+
+        while (opcao != 7) {
+            System.out.println("\n=================================");
+            System.out.println("MENU");
+            System.out.println("[1] - Adicionar contatos");
+            System.out.println("[4] - Buscar contatos");
+            System.out.println("[6] - Sair");
+
+            System.out.print("Digite a opção -> ");
+            opcao = sc.nextInt();
+            sc.nextLine();
+
+            switch (opcao) {
+                case 1 -> executor.executeCommand(new AdicionarContatoCommand());
+                case 4 -> executor.executeCommand(new BuscarContatoCommand());
+                case 6 -> System.out.println("Tchau!");
+                default -> System.out.println("Opção inválida");
             }
-            leitor.close();
         }
+    }
 }

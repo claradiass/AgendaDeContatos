@@ -15,7 +15,7 @@ public class InMemoryDataService implements DataService {
     }
 
     @Override
-    public List<Contatos> getAll(){
+    public List<Contato> getAll(){
         return contatos;
     }
 
@@ -26,15 +26,15 @@ public class InMemoryDataService implements DataService {
     }
 
     @Override
-    public List<Contatos> search(String termo, int digit) {
+    public List<Contato> search(String termo, int digit) {
         return contatos.stream()
-                .filter(p -> (p.getNome() + " " + p.getSobrenome()).toLowerCase().contains(termo.toLowerCase()) && p.getContato().contains(Int.valueOf(digit)))
-                .toList();
+                .filter(p -> (p.getNome() + " " + p.getSobrenome()).toLowerCase().contains(termo.toLowerCase()) && p.getContato() == digit)
+                .collect(Collectors.toList());
     }
 
     @Override
-    public boolean exists(Int contato) {
-        return contatos.stream().anyMatch(c -> c.getContato().equals(contato));
+    public boolean exists(Contato c) {
+        return contatos.stream().anyMatch(contact -> contact.getContato() == c.getContato());
     }
 
     @Override
@@ -56,5 +56,3 @@ public class InMemoryDataService implements DataService {
         .collect(Collectors.toList());
     }
 }
-
-

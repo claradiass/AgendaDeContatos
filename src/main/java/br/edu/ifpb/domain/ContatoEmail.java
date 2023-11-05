@@ -7,7 +7,7 @@ public class ContatoEmail extends Contato{
     private String email;
     Scanner leitor = new Scanner(System.in);
 
-    public ContatoEmail(String nome, String sobrenome, int contato, String categoria, String email) {
+    public ContatoEmail(String nome, String sobrenome, int contato,boolean chamadaVideo, String categoria, String email) {
         super(nome, sobrenome, contato, false, categoria);
         this.email = email;
         if (isValidEmail(email)) {

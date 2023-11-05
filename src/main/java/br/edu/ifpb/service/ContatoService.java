@@ -18,18 +18,19 @@ public class ContatoService {
     }
 
     public void criar(Contato contato) {
-        if (categoria.equalsIgnoreCase("1")) {
-            repository.add(new ContatoTelefone(nome, sobrenome, contato, categoria, aniversario));
+        repository.add(contato);
+        // if (categoria.equalsIgnoreCase("1")) {
+        //     repository.add(new ContatoTelefone(nome, sobrenome, contato, categoria, aniversario));
 
-        } else if (categoria.equalsIgnoreCase("2")) {
-            repository.add(new ContatoEmail(nome, sobrenome, contato, categoria, email));
+        // } else if (categoria.equalsIgnoreCase("2")) {
+        //     repository.add(new ContatoEmail(nome, sobrenome, contato, categoria, email));
 
-        } else if (categoria.equalsIgnoreCase("3")) {
-            repository.add(new ContatoWhatsApp(nome, sobrenome, contato, categoria));
+        // } else if (categoria.equalsIgnoreCase("3")) {
+        //     repository.add(new ContatoWhatsApp(nome, sobrenome, contato, categoria));
 
-        } else {
-            throw new IllegalArgumentException("Tipo de contato desconhecida: ");
-        }
+        // } else {
+        //     throw new IllegalArgumentException("Tipo de contato desconhecida: ");
+        // }
     }
 
     public Contato get(int index) {

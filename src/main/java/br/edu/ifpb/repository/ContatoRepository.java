@@ -24,6 +24,10 @@ public class ContatoRepository {
         return instance;
     }
 
+    public void setRepository(DataService dataService) {
+        this.dataService = dataService;
+    }
+
     public void add(Contato c) {
         dataService.add(c);
     }
@@ -40,7 +44,7 @@ public class ContatoRepository {
         return dataService.search(termo, digit);
     }
 
-    public boolean exists(Int contato) {
+    public boolean exists(int contato) {
         return dataService.exists(contato);
     }
 

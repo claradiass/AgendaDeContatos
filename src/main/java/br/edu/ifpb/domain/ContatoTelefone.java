@@ -6,7 +6,7 @@ public class ContatoTelefone extends Contato{
     private String aniversario;
     Scanner leitor = new Scanner(System.in);
 
-    public ContatoTelefone(String nome, String sobrenome, int contato, String categoria, String aniversario) {
+    public ContatoTelefone(String nome, String sobrenome, int contato, boolean chamadaVideo, String categoria, String aniversario) {
         super(nome, sobrenome, contato, false, categoria);
         
         if (isValidDataDeAniversario(aniversario)) {
