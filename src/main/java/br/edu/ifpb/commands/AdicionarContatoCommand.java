@@ -1,8 +1,5 @@
 package br.edu.ifpb.commands;
 
-import br.edu.ifpb.domain.ContatoEmail;
-import br.edu.ifpb.domain.ContatoTelefone;
-import br.edu.ifpb.domain.ContatoWhatsApp;
 import br.edu.ifpb.repository.ContatoRepository;
 import br.edu.ifpb.service.ContatoService;
 import br.edu.ifpb.validators.TypeChoiceValidator;
