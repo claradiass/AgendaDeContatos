@@ -1,13 +1,13 @@
 package br.edu.ifpb.validators;
 
-import br.edu.ifpb.repository.PacienteRepository;
-import br.edu.ifpb.service.PacienteService;
+import br.edu.ifpb.repository.ContatoRepository;
+import br.edu.ifpb.service.ContatoService;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class ContatoValidator implements Validator<String> {
-    private final PacienteService pacienteService = new PacienteService(PacienteRepository.getInstance());
+    private final ContatoService pacienteService = new ContatoService(ContatoRepository.getInstance());
     private final boolean checkIfExists;
 
     public ContatoValidator(boolean checkIfExists) {
