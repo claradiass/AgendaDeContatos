@@ -1,14 +1,14 @@
-package main.java.br.edu.ifpb.service;
+package br.edu.ifpb.service;
 
 import java.lang.reflect.Constructor;
 import java.util.List;
 import java.util.Map;
 
-import main.java.br.edu.ifpb.domain.Contato;
-import main.java.br.edu.ifpb.domain.ContatoEmail;
-import main.java.br.edu.ifpb.domain.ContatoTelefone;
-import main.java.br.edu.ifpb.domain.ContatoWhatsApp;
-import main.java.br.edu.ifpb.repository.ContatoRepository;
+import br.edu.ifpb.domain.Contato;
+import br.edu.ifpb.domain.ContatoEmail;
+import br.edu.ifpb.domain.ContatoTelefone;
+import br.edu.ifpb.domain.ContatoWhatsApp;
+import br.edu.ifpb.repository.ContatoRepository;
 
 public class ContatoService {
     private final ContatoRepository repository;
