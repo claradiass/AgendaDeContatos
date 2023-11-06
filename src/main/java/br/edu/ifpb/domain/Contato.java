@@ -9,9 +9,13 @@ import java.util.Objects;
 public class Contato implements Serializable{
     private String nome;
     private String sobrenome;
-    private int contato;
+    private boolean ligacao;
     private boolean chamadaVideo;
     private String categoria;
+    private String redeSocial;
+    private String contato;
+    private String email;
+
 
     // construtor
     public Contato(String nome,String sobrenome, int contato, boolean chamadaVideo, String categoria){
