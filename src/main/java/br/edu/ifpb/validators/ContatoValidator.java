@@ -7,7 +7,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class ContatoValidator implements Validator<String> {
-    private final ContatoService pacienteService = new ContatoService(ContatoRepository.getInstance());
+    private final ContatoService contatoService = new ContatoService(ContatoRepository.getInstance());
     private final boolean checkIfExists;
 
     public ContatoValidator(boolean checkIfExists) {
