@@ -39,7 +39,6 @@ public class Contato implements Serializable {
             // compara se o contato tem o mesmo tipo de entrada e o mesmo valor da entrada
     }
 
-
     // setters e getters
     public String getNome() {
         return nome;
