@@ -1,4 +1,4 @@
-package main.java.br.edu.ifpb.validators;
+package br.edu.ifpb.validators;
 
 
 public class TypeChoiceValidator implements Validator<Integer> {
