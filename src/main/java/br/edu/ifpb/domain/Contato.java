@@ -29,13 +29,16 @@ public class Contato implements Serializable {
         this.valorDaEntrada = valorDaEntrada;
     }
 
-    // @Override
-    // public boolean equals(Object obj) {
-    // if (this == obj) return true;
-    // if (obj == null || getClass() != obj.getClass()) return false;
-    // Contato contato = (Contato) obj;
-    // return this.contato == contato.contato;
-    // }
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        Contato contato = (Contato) obj;
+        return Objects.equals(this.tipoDeEntrada, contato.tipoDeEntrada) &&
+            Objects.equals(this.valorDaEntrada, contato.valorDaEntrada);
+            // compara se o contato tem o mesmo tipo de entrada e o mesmo valor da entrada
+    }
+
 
     // setters e getters
     public String getNome() {
@@ -107,8 +110,8 @@ public class Contato implements Serializable {
     // sobrescrita
 
     @Override
-    public String hashCode() {
-        return Objects.hash(getValorDeEntrada());
+    public int hashCode() {
+        return Objects.hash(getValorDaEntrada());
     }
 
     // Este método está calculando o código hash (um valor numérico) com base apenas
