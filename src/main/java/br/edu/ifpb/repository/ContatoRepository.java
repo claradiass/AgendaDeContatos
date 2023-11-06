@@ -3,6 +3,7 @@ package br.edu.ifpb.repository;
 import java.util.List;
 
 import br.edu.ifpb.domain.Contato;
+import br.edu.ifpb.domain.RedeSocial;
 
 public class ContatoRepository {
     private DataService dataService;
@@ -40,11 +41,11 @@ public class ContatoRepository {
         dataService.update(c);
     }
 
-    public List<Contato> search(String termo, int digit) {
-        return dataService.search(termo, digit);
+    public List<Contato> search(String termo) {
+        return dataService.search(termo);
     }
 
-    public boolean exists(int contato) {
+    public boolean exists(Contato contato) {
         return dataService.exists(contato);
     }
 
@@ -58,6 +59,10 @@ public class ContatoRepository {
 
     public List<Contato> getContatosPorChamada(boolean chamadaDeVideo) {
         return dataService.getContatosPorChamada(chamadaDeVideo);
+    }
+
+    public List<Contato> getContatosPorRedeSocial(RedeSocial redeSocial) {
+        return dataService.getContatosPorRedeSocial(redeSocial);
     }
 
     public void setDataService(DataService dataService) {

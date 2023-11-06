@@ -41,7 +41,6 @@ public class Contato implements Serializable {
             // compara se o contato tem o mesmo tipo de entrada e o mesmo valor da entrada
     }
 
-<<<<<<< HEAD
     public String toString() {
         return "Nome:" + getNome() + "Sobrenome" + getSobrenome() + "Recebe Ligação?" + isLigacao() + "Essa ligação pode ser uma chamada de vídeo?" + 
         isChamadaVideo() + "Rede social: " + getRedeSocial() + "Dado específico: " + getValorDaEntrada() + "Categoria: " + getCategoria();
@@ -54,9 +53,6 @@ public class Contato implements Serializable {
         return Objects.hash(getValorDaEntrada());
     }
 
-
-=======
->>>>>>> 37c8805acb4805c6a14f292125bd2f3d32694d16
     // setters e getters
     public String getNome() {
         return nome;
