@@ -1,8 +1,8 @@
-package main.java.br.edu.ifpb.repository;
+package br.edu.ifpb.repository;
 
 import java.util.List;
 
-import main.java.br.edu.ifpb.domain.Contato;
+import br.edu.ifpb.domain.Contato;
 
 public class ContatoRepository {
     private DataService dataService;

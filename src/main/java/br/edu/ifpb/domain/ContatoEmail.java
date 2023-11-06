@@ -1,4 +1,4 @@
-package main.java.br.edu.ifpb.domain;
+package br.edu.ifpb.domain;
 
 import java.util.Scanner;
 

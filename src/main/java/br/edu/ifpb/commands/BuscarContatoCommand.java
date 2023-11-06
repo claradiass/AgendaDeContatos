@@ -1,9 +1,9 @@
-package main.java.br.edu.ifpb.commands;
+package br.edu.ifpb.commands;
 
 import java.util.List;
 
-import main.java.br.edu.ifpb.repository.ContatoRepository;
-import main.java.br.edu.ifpb.service.ContatoService;
+import br.edu.ifpb.repository.ContatoRepository;
+import br.edu.ifpb.service.ContatoService;
 import br.edu.ifpb.commands.Command;
 
 public class BuscarContatoCommand implements Command{

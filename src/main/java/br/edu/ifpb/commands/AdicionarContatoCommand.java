@@ -1,11 +1,11 @@
-package main.java.br.edu.ifpb.commands;
+package br.edu.ifpb.commands;
 
-import main.java.br.edu.ifpb.domain.ContatoEmail;
-import main.java.br.edu.ifpb.domain.ContatoTelefone;
-import main.java.br.edu.ifpb.domain.ContatoWhatsApp;
-import main.java.br.edu.ifpb.repository.ContatoRepository;
-import main.java.br.edu.ifpb.service.ContatoService;
-import main.java.br.edu.ifpb.validators.TypeChoiceValidator;
+import br.edu.ifpb.domain.ContatoEmail;
+import br.edu.ifpb.domain.ContatoTelefone;
+import br.edu.ifpb.domain.ContatoWhatsApp;
+import br.edu.ifpb.repository.ContatoRepository;
+import br.edu.ifpb.service.ContatoService;
+import br.edu.ifpb.validators.TypeChoiceValidator;
 
 import java.util.Scanner;
 

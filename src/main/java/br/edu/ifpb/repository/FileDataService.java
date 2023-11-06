@@ -1,4 +1,4 @@
-package main.java.br.edu.ifpb.repository;
+package br.edu.ifpb.repository;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -8,7 +8,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.List;
 
-import main.java.br.edu.ifpb.domain.Contato;
+import br.edu.ifpb.domain.Contato;
 
 public class FileDataService extends InMemoryDataService{
     public FileDataService() {

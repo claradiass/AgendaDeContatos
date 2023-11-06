@@ -2,14 +2,14 @@ package agendadecontatos;
 
 import java.util.*;
 
-import main.java.br.edu.ifpb.commands.AdicionarContatoCommand;
-import main.java.br.edu.ifpb.commands.BuscarContatoCommand;
-import main.java.br.edu.ifpb.commands.CommandExecutor;
+import br.edu.ifpb.commands.AdicionarContatoCommand;
+import br.edu.ifpb.commands.BuscarContatoCommand;
+import br.edu.ifpb.commands.CommandExecutor;
 
 
 import br.edu.ifpb.commands.*;
-import main.java.br.edu.ifpb.repository.ContatoRepository;
-import main.java.br.edu.ifpb.repository.FileDataService;
+import br.edu.ifpb.repository.ContatoRepository;
+import br.edu.ifpb.repository.FileDataService;
 
 public class AgendaDeContatosConsoleApplication {
 

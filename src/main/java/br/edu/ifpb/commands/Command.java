@@ -1,5 +1,5 @@
 package br.edu.ifpb.commands;
 
-public interface Command {
+  public interface Command {
     void execute();
 }

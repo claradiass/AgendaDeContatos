@@ -1,10 +1,10 @@
-package main.java.br.edu.ifpb.repository;
+package br.edu.ifpb.repository;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import main.java.br.edu.ifpb.domain.Contato;
+import br.edu.ifpb.domain.Contato;
 
 public class InMemoryDataService implements DataService {
     protected List<Contato> contatos = new ArrayList<>();
