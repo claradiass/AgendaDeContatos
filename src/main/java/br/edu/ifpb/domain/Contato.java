@@ -5,11 +5,10 @@ import java.util.Objects;
 import java.util.ArrayList;
 import java.util.List;
 
-
 // Em resumo, a importação import java.io.Serializable; não é usada diretamente no código, mas a implementação da interface Serializable na classe 
 // Contato permite que os objetos dessa classe sejam serializados.
 
-public class Contato implements Serializable{
+public class Contato implements Serializable {
     private String nome;
     private String sobrenome;
     private boolean ligacao;
@@ -17,10 +16,10 @@ public class Contato implements Serializable{
     private String categoria;
     private String tipoDeEntrada;
     private String valorDaEntrada;
-    
 
     // construtor
-    public Contato(String nome,String sobrenome, boolean ligacao, boolean chamadaVideo, String categoria, String tipoDeEntrada, String valorDaEntrada){
+    public Contato(String nome, String sobrenome, boolean ligacao, boolean chamadaVideo, String categoria,
+            String tipoDeEntrada, String valorDaEntrada) {
         this.nome = nome;
         this.sobrenome = sobrenome;
         this.ligacao = ligacao;
@@ -30,18 +29,19 @@ public class Contato implements Serializable{
         this.valorDaEntrada = valorDaEntrada;
     }
 
-    //@Override
-    //public boolean equals(Object obj) {
-        //if (this == obj) return true;
-        //if (obj == null || getClass() != obj.getClass()) return false;
-        //Contato contato = (Contato) obj;
-        //return this.contato == contato.contato;
-    //}
+    // @Override
+    // public boolean equals(Object obj) {
+    // if (this == obj) return true;
+    // if (obj == null || getClass() != obj.getClass()) return false;
+    // Contato contato = (Contato) obj;
+    // return this.contato == contato.contato;
+    // }
 
     // setters e getters
     public String getNome() {
         return nome;
     }
+
     public void setNome(String nome) {
         this.nome = nome;
     }
@@ -54,11 +54,11 @@ public class Contato implements Serializable{
         this.sobrenome = sobrenome;
     }
 
-    public boolean getLigacao(){
+    public boolean getLigacao() {
         return ligacao;
     }
 
-    public void setLigacao(boolean ligacao){
+    public void setLigacao(boolean ligacao) {
         this.ligacao = ligacao;
     }
 
@@ -94,10 +94,10 @@ public class Contato implements Serializable{
         this.valorDaEntrada = valorDaEntrada;
     }
 
-    public void redeSocial(){
+    public void redeSocial() {
         List<String> aplicativos = new ArrayList<>();
 
-        aplicativos.add("Email");        
+        aplicativos.add("Email");
         aplicativos.add("WhatsApp");
         aplicativos.add("Instagram");
         aplicativos.add("Telegram");
@@ -111,11 +111,13 @@ public class Contato implements Serializable{
         return Objects.hash(getValorDeEntrada());
     }
 
-    // Este método está calculando o código hash (um valor numérico) com base apenas no atributo número 
-    // do objeto Contato. Isso significa que, se dois Contatos tiverem o mesmo número, 
-    // eles terão o mesmo código hash, o que é desejável para garantir que objetos com o 
-    // mesmo número sejam considerados iguais ao serem inseridos em estruturas de dados que dependem 
+    // Este método está calculando o código hash (um valor numérico) com base apenas
+    // no atributo número
+    // do objeto Contato. Isso significa que, se dois Contatos tiverem o mesmo
+    // número,
+    // eles terão o mesmo código hash, o que é desejável para garantir que objetos
+    // com o
+    // mesmo número sejam considerados iguais ao serem inseridos em estruturas de
+    // dados que dependem
     // do código hash, como HashSetouHashMap`.
 }
-
-
