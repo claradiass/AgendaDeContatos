@@ -57,7 +57,7 @@ public class Contato implements Serializable {
         this.sobrenome = sobrenome;
     }
 
-    public boolean getLigacao() {
+    public boolean isLigacao() {
         return ligacao;
     }
 
@@ -97,14 +97,11 @@ public class Contato implements Serializable {
         this.valorDaEntrada = valorDaEntrada;
     }
 
-    public void redeSocial() {
-        List<String> aplicativos = new ArrayList<>();
 
-        aplicativos.add("Email");
-        aplicativos.add("WhatsApp");
-        aplicativos.add("Instagram");
-        aplicativos.add("Telegram");
+    
 
+    public String toString() {
+        return "Nome:" + getNome() + "Sobrenome" + getSobrenome() + "Recebe Ligação?" + isLigacao() + "Essa ligação pode ser uma chamada de vídeo?" + isChamadaVideo() + "";
     }
 
     // sobrescrita
