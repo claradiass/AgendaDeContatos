@@ -18,14 +18,6 @@ public class Contato implements Serializable {
     private String valorDaEntrada;
     private RedeSocial redeSocial;
 
-    public RedeSocial getRedeSocial() {
-        return redeSocial;
-    }
-
-    public void setRedeSocial(RedeSocial redeSocial) {
-        this.redeSocial = redeSocial;
-    }
-
     // construtor
     public Contato(String nome, String sobrenome, boolean ligacao, boolean chamadaVideo, String categoria,
             String tipoDeEntrada, String valorDaEntrada, RedeSocial redeSocial) {
@@ -47,6 +39,18 @@ public class Contato implements Serializable {
         return Objects.equals(this.tipoDeEntrada, contato.tipoDeEntrada) &&
             Objects.equals(this.valorDaEntrada, contato.valorDaEntrada);
             // compara se o contato tem o mesmo tipo de entrada e o mesmo valor da entrada
+    }
+
+    public String toString() {
+        return "Nome:" + getNome() + "Sobrenome" + getSobrenome() + "Recebe Ligação?" + isLigacao() + "Essa ligação pode ser uma chamada de vídeo?" + 
+        isChamadaVideo() + "Rede social: " + getRedeSocial() + "Dado específico: " + getValorDaEntrada() + "Categoria: " + getCategoria();
+    }
+
+    // sobrescrita
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getValorDaEntrada());
     }
 
 
@@ -107,19 +111,12 @@ public class Contato implements Serializable {
         this.valorDaEntrada = valorDaEntrada;
     }
 
-
-    
-
-    public String toString() {
-        return "Nome:" + getNome() + "Sobrenome" + getSobrenome() + "Recebe Ligação?" + isLigacao() + "Essa ligação pode ser uma chamada de vídeo?" + 
-        isChamadaVideo() + "Rede social: " + getRedeSocial();
+    public RedeSocial getRedeSocial() {
+        return redeSocial;
     }
 
-    // sobrescrita
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(getValorDaEntrada());
+    public void setRedeSocial(RedeSocial redeSocial) {
+        this.redeSocial = redeSocial;
     }
 
     // Este método está calculando o código hash (um valor numérico) com base apenas

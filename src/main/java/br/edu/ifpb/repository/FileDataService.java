@@ -24,7 +24,7 @@ public class FileDataService extends InMemoryDataService{
 
     @Override
     public void add(Contato c) {
-        sucer.add(c);
+        super.add(c);
         write();
     }
 
