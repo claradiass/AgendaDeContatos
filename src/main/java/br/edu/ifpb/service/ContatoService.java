@@ -18,16 +18,17 @@ public class ContatoService {
     public void criar(Contato contato) {
         repository.add(contato);
         // if (categoria.equalsIgnoreCase("1")) {
-        //     repository.add(new ContatoTelefone(nome, sobrenome, contato, categoria, aniversario));
+        // repository.add(new ContatoTelefone(nome, sobrenome, contato, categoria,
+        // aniversario));
 
         // } else if (categoria.equalsIgnoreCase("2")) {
-        //     repository.add(new ContatoEmail(nome, sobrenome, contato, categoria, email));
+        // repository.add(new ContatoEmail(nome, sobrenome, contato, categoria, email));
 
         // } else if (categoria.equalsIgnoreCase("3")) {
-        //     repository.add(new ContatoWhatsApp(nome, sobrenome, contato, categoria));
+        // repository.add(new ContatoWhatsApp(nome, sobrenome, contato, categoria));
 
         // } else {
-        //     throw new IllegalArgumentException("Tipo de contato desconhecida: ");
+        // throw new IllegalArgumentException("Tipo de contato desconhecida: ");
         // }
     }
 
@@ -52,6 +53,6 @@ public class ContatoService {
     }
 
     public void editar(Contato contato) {
-        
+
     }
 }
