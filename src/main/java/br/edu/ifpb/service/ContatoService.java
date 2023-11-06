@@ -5,9 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 import br.edu.ifpb.domain.Contato;
-import br.edu.ifpb.domain.ContatoEmail;
-import br.edu.ifpb.domain.ContatoTelefone;
-import br.edu.ifpb.domain.ContatoWhatsApp;
+
 import br.edu.ifpb.repository.ContatoRepository;
 
 public class ContatoService {
