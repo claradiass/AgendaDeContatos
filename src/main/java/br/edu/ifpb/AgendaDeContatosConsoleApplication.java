@@ -1,4 +1,4 @@
-package agendadecontatos;
+package br.edu.ifpb;
 
 import java.util.*;
 

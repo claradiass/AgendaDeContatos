@@ -107,8 +107,8 @@ public class Contato implements Serializable {
     // sobrescrita
 
     @Override
-    public String hashCode() {
-        return Objects.hash(getValorDeEntrada());
+    public int hashCode() {
+        return Objects.hash(getValorDaEntrada());
     }
 
     // Este método está calculando o código hash (um valor numérico) com base apenas
