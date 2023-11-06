@@ -16,10 +16,19 @@ public class Contato implements Serializable {
     private String categoria;
     private String tipoDeEntrada;
     private String valorDaEntrada;
+    private RedeSocial redeSocial;
+
+    public RedeSocial getRedeSocial() {
+        return redeSocial;
+    }
+
+    public void setRedeSocial(RedeSocial redeSocial) {
+        this.redeSocial = redeSocial;
+    }
 
     // construtor
     public Contato(String nome, String sobrenome, boolean ligacao, boolean chamadaVideo, String categoria,
-            String tipoDeEntrada, String valorDaEntrada) {
+            String tipoDeEntrada, String valorDaEntrada, RedeSocial redeSocial) {
         this.nome = nome;
         this.sobrenome = sobrenome;
         this.ligacao = ligacao;
@@ -27,6 +36,7 @@ public class Contato implements Serializable {
         this.categoria = categoria;
         this.tipoDeEntrada = tipoDeEntrada;
         this.valorDaEntrada = valorDaEntrada;
+        this.redeSocial = redeSocial;
     }
 
     @Override
@@ -100,7 +110,8 @@ public class Contato implements Serializable {
     
 
     public String toString() {
-        return "Nome:" + getNome() + "Sobrenome" + getSobrenome() + "Recebe Ligação?" + isLigacao() + "Essa ligação pode ser uma chamada de vídeo?" + isChamadaVideo() + "";
+        return "Nome:" + getNome() + "Sobrenome" + getSobrenome() + "Recebe Ligação?" + isLigacao() + "Essa ligação pode ser uma chamada de vídeo?" + 
+        isChamadaVideo() + "Rede social: " + getRedeSocial();
     }
 
     // sobrescrita
