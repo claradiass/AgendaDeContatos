@@ -15,6 +15,8 @@ public class Contato implements Serializable {
     private String tipoDeEntrada;
     private String valorDaEntrada;
     private RedeSocial redeSocial;
+    private String aniversario;
+
 
     // construtor
     public Contato(String nome, String sobrenome, boolean ligacao, boolean chamadaVideo, String categoria,
@@ -114,6 +116,14 @@ public class Contato implements Serializable {
 
     public void setRedeSocial(RedeSocial redeSocial) {
         this.redeSocial = redeSocial;
+    }
+
+    public String getAniversario() {
+      return aniversario;
+    }
+
+    public void setAniversario(String aniversario) {
+      this.aniversario = aniversario;
     }
 
     // Este método está calculando o código hash (um valor numérico) com base apenas
