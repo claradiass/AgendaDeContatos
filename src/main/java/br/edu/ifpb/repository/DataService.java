@@ -2,6 +2,7 @@ package br.edu.ifpb.repository;
 
 import java.util.List;
 import br.edu.ifpb.domain.Contato;
+import br.edu.ifpb.domain.RedeSocial;
 
 public interface DataService {
 
@@ -11,11 +12,13 @@ public interface DataService {
 
     void update(Contato c);
 
-    List<Contato> search(String termo, int digit);
+    List<Contato> search(String termo);
 
     boolean exists(Contato c);
 
     void remove(Contato c);
+
+    List<Contato> getContatosPorRedeSocial(RedeSocial redeSocial);
 
     List<Contato> getContatosPorCategoria(String categoria);
 
