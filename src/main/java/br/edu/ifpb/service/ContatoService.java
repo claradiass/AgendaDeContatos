@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 import br.edu.ifpb.domain.Contato;
+import br.edu.ifpb.domain.RedeSocial;
 import br.edu.ifpb.repository.ContatoRepository;
 
 public class ContatoService {
@@ -14,36 +15,24 @@ public class ContatoService {
         this.repository = repository;
     }
 
-    public void criar(Contato contato) {
-        repository.add(contato);
-        // if (categoria.equalsIgnoreCase("1")) {
-        // repository.add(new ContatoTelefone(nome, sobrenome, contato, categoria,
-        // aniversario));
-
-        // } else if (categoria.equalsIgnoreCase("2")) {
-        // repository.add(new ContatoEmail(nome, sobrenome, contato, categoria, email));
-
-        // } else if (categoria.equalsIgnoreCase("3")) {
-        // repository.add(new ContatoWhatsApp(nome, sobrenome, contato, categoria));
-
-        // } else {
-        // throw new IllegalArgumentException("Tipo de contato desconhecida: ");
-        // }
+    public void criar(String nome, String sobrenome, boolean ligacao, boolean chamadaVideo, String categoria,
+            String tipoDeEntrada, String valorDaEntrada, RedeSocial redeSocial) {
+        repository.add(new Contato(nome, sobrenome, ligacao, chamadaVideo, categoria, tipoDeEntrada, valorDaEntrada, redeSocial));
     }
 
     public Contato get(int index) {
         return repository.getAll().get(index);
     }
 
-    public List<Contato> buscar(String termo, int digit) {
-        return repository.search(termo, digit);
+    public List<Contato> buscar(String termo) {
+        return repository.search(termo);
     }
 
     public List<Contato> getContatos() {
         return repository.getAll();
     }
 
-    public boolean existe(String contato) {
+    public boolean existe(Contato contato) {
         return repository.exists(contato);
     }
 
@@ -51,22 +40,8 @@ public class ContatoService {
         repository.remove(c);
     }
 
-    public void editar(Contato contato) {
-<<<<<<< HEAD
-        if (categoria.equalsIgnoreCase("1")) {
-            repository.update(new ContatoTelefone(nome, sobrenome, contato, categoria, aniversario));
-
-        } else if (categoria.equalsIgnoreCase("2")) {
-            repository.update(new ContatoEmail(nome, sobrenome, contato, categoria, email));
-
-        } else if (categoria.equalsIgnoreCase("3")) {
-            repository.update(new ContatoWhatsApp(nome, sobrenome, contato, categoria));
-
-        } else {
-            throw new IllegalArgumentException("Tipo de contato desconhecida: ");
-        }
-=======
-
->>>>>>> 5be3dcfd527d2c69c1a3d9141c96a2909e11f5d2
+    public void editar(String nome, String sobrenome, boolean ligacao, boolean chamadaVideo, String categoria,
+            String tipoDeEntrada, String valorDaEntrada, RedeSocial redeSocial) {
+        repository.update(new Contato(nome, sobrenome, ligacao, chamadaVideo, categoria, tipoDeEntrada, valorDaEntrada, redeSocial));
     }
 }
