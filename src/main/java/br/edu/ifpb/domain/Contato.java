@@ -2,8 +2,6 @@ package br.edu.ifpb.domain;
 
 import java.io.Serializable;
 import java.util.Objects;
-import java.util.ArrayList;
-import java.util.List;
 
 // Em resumo, a importação import java.io.Serializable; não é usada diretamente no código, mas a implementação da interface Serializable na classe 
 // Contato permite que os objetos dessa classe sejam serializados.
