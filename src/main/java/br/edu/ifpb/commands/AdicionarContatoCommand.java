@@ -7,6 +7,7 @@ import br.edu.ifpb.validators.TypeChoiceValidator;
 import java.util.Scanner;
 
 import br.edu.ifpb.commands.Command;
+import br.edu.ifpb.domain.RedeSocial;
 import br.edu.ifpb.validators.ContatoValidator;
 import br.edu.ifpb.validators.DateValidator;
 import br.edu.ifpb.validators.NonEmptyValidator;
@@ -26,9 +27,28 @@ public class AdicionarContatoCommand implements Command{
         String nome = nomeValidationContext.getValidValue("Nome: ", "Nome não pode ser vazio", String.class);
         
         ValidationContext<String> sobrenomeValidationContext = new ValidationContext<>(new NonEmptyValidator());
-        String sobrenome = sobrenomeValidationContext.getValidValue("Nome: ", "Nome não pode ser vazio", String.class);
+        String sobrenome = sobrenomeValidationContext.getValidValue("Sobrenome: ", "Sobrenome não pode ser vazio", String.class);
+
+        boolean ligacao = true;
+        boolean chamadaVideo = false;
+
+        ValidationContext<String> categoriaValidationContext = new ValidationContext<>(new NonEmptyValidator());
+        String categoria = categoriaValidationContext.getValidValue("Categoria: ", "Categoria não pode ser vazio", String.class);
+
+        ValidationContext<String> tipoDeEntradaValidationContext = new ValidationContext<>(new NonEmptyValidator());
+        String tipoDeEntrada = tipoDeEntradaValidationContext.getValidValue("Tipo de entrada: ", "Tipo de entrada não pode ser vazio", String.class);
+
+        ValidationContext<String> valorDaEntradaValidationContext = new ValidationContext<>(new NonEmptyValidator());
+        String valorDaEntrada = valorDaEntradaValidationContext.getValidValue("Valor da entrada: ", "Valor da entrada não pode ser vazio", String.class);
+
+        
+
+
+        
         
         System.out.println("");
+
+
         
         
         contatoService.criar(nome, sobrenome);

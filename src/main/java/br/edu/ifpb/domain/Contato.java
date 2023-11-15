@@ -71,7 +71,7 @@ public class Contato implements Serializable {
     }
 
     public boolean isLigacao() {
-        return ligacao;
+        return true;
     }
 
     public void setLigacao(boolean ligacao) {
@@ -79,7 +79,7 @@ public class Contato implements Serializable {
     }
 
     public boolean isChamadaVideo() {
-        return chamadaVideo;
+        return false;
     }
 
     public void setChamadaVideo(boolean chamadaVideo) {
